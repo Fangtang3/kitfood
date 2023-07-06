@@ -7,7 +7,7 @@ public final class Kitfood extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-
+        this.getCommand("kf").setExecutor(new kf());
     }
 
     @Override

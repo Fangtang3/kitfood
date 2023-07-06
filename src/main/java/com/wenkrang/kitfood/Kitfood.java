@@ -1,5 +1,6 @@
 package com.wenkrang.kitfood;
 
+import com.wenkrang.kitfood.book.kf;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Kitfood extends JavaPlugin {

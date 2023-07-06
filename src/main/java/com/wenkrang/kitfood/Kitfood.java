@@ -1,6 +1,8 @@
 package com.wenkrang.kitfood;
 
+import com.wenkrang.kitfood.book.clickevent;
 import com.wenkrang.kitfood.book.kf;
+import com.wenkrang.kitfood.book.openbook;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Kitfood extends JavaPlugin {
@@ -9,6 +11,8 @@ public final class Kitfood extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         this.getCommand("kf").setExecutor(new kf());
+        this.getServer().getPluginManager().registerEvents(new openbook(),this);
+        this.getServer().getPluginManager().registerEvents(new clickevent(),this);
     }
 
     @Override

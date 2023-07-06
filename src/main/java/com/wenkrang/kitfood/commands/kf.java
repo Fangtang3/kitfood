@@ -1,4 +1,4 @@
-package com.wenkrang.kitfood.book;
+package com.wenkrang.kitfood.commands;
 
 import org.bukkit.Material;
 import org.bukkit.block.CommandBlock;
@@ -17,23 +17,21 @@ public class kf implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         //help命令
         if (args[0].equalsIgnoreCase("help")) {
-            sender.sendMessage("§a------ §ekitfood 厨艺工艺§a -------");
-            sender.sendMessage("§a | getbook 获取教程书 ");
-            sender.sendMessage("§a | help 打开这个帮助页面");
+            sender.sendMessage("§7[!]  §4厨艺工艺 - kitfood §7正在运行");
+            sender.sendMessage(" §4| §7help  帮助列表");
+            sender.sendMessage(" §4| §7getbook  获取帮助书");
         }
-
-
 
         //getbook命令
         if (args[0].equalsIgnoreCase("getbook")) {
             if (sender instanceof Player) {
                 //构建物品
-                ItemStack book = new ItemStack(Material.BOOK);
+                ItemStack book = new ItemStack(Material.ENCHANTED_BOOK);
                 ItemMeta itemMeta = book.getItemMeta();
                 itemMeta.setDisplayName("§ekitfood 教程书");
                 ArrayList<String> Lore = new ArrayList<>();
                 Lore.add("");
-                Lore.add("§4 右键这本书可以打开 kitfood 的教程界面");
+                Lore.add("§7 右键这本书可以打开 kitfood 的教程界面");
                 itemMeta.setLore(Lore);
                 itemMeta.addEnchant(Enchantment.DURABILITY, 3, true);
                 book.setItemMeta(itemMeta);

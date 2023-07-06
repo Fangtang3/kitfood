@@ -1,7 +1,7 @@
 package com.wenkrang.kitfood;
 
 import com.wenkrang.kitfood.book.clickevent;
-import com.wenkrang.kitfood.book.kf;
+import com.wenkrang.kitfood.commands.kf;
 import com.wenkrang.kitfood.book.openbook;
 import org.bukkit.plugin.java.JavaPlugin;
 

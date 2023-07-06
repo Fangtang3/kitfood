@@ -1,0 +1,4 @@
+name: kitfood
+version: '${version}'
+main: com.wenkrang.kitfood.Kitfood
+api-version: '1.20'

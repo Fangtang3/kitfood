@@ -1,5 +1,6 @@
 package com.wenkrang.kitfood;
 
+import com.wenkrang.kitfood.book.chujugui;
 import com.wenkrang.kitfood.book.clickevent;
 import com.wenkrang.kitfood.commands.kf;
 import com.wenkrang.kitfood.book.openbook;
@@ -13,6 +14,7 @@ public final class Kitfood extends JavaPlugin {
         this.getCommand("kf").setExecutor(new kf());
         this.getServer().getPluginManager().registerEvents(new openbook(),this);
         this.getServer().getPluginManager().registerEvents(new clickevent(),this);
+        this.getServer().getPluginManager().registerEvents(new chujugui(),this);
     }
 
     @Override

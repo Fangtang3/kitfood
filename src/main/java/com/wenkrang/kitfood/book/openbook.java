@@ -10,6 +10,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class openbook implements Listener {
     @EventHandler
     public void Playeropenbook (PlayerInteractEvent event){
@@ -17,13 +19,23 @@ public class openbook implements Listener {
         if (player.getInventory().getItemInMainHand().getItemMeta() != null){
             ItemStack itemStack = player.getInventory().getItemInMainHand();
             if (itemStack.getItemMeta().getDisplayName().equalsIgnoreCase("§ekitfood 教程书")) {
-                Inventory gui = Bukkit.createInventory(null, 54, "§e kitfood 教程书");
+                Inventory gui = Bukkit.createInventory(null, 54, "§7kitfood-教程书");
 
                 //背景
                 ItemStack back = new ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE);
                 ItemMeta backMeta = back.getItemMeta();
                 backMeta.setDisplayName("");
                 back.setItemMeta(backMeta);
+
+                //厨具
+                ItemStack kit = new ItemStack(Material.CAULDRON);
+                ItemMeta kitMeta = kit.getItemMeta();
+                kitMeta.setDisplayName("§e厨具");
+                ArrayList<String> lore = new ArrayList<>();
+                lore.add("");
+                lore.add("§a这是用来做菜的工具，没啥好解释的");
+                kitMeta.setLore(lore);
+                kit.setItemMeta(kitMeta);
 
                 //渲染界面
                 gui.setItem(0, back);
@@ -35,6 +47,7 @@ public class openbook implements Listener {
                 gui.setItem(6, back);
                 gui.setItem(7, back);
                 gui.setItem(8, back);
+                gui.setItem(9, kit);
                 gui.setItem(45, back);
                 gui.setItem(46, back);
                 gui.setItem(47, back);

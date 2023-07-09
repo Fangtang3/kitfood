@@ -15,12 +15,6 @@ import java.util.ArrayList;
 public class kf implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        //help命令
-        if (args[0].equalsIgnoreCase("help")) {
-            sender.sendMessage("§7[!]  §4厨艺工艺 - kitfood §7正在运行");
-            sender.sendMessage(" §4| §7help  帮助列表");
-            sender.sendMessage(" §4| §7getbook  获取帮助书");
-        }
 
         //getbook命令
         if (args[0].equalsIgnoreCase("getbook")) {
@@ -28,7 +22,7 @@ public class kf implements CommandExecutor {
                 //构建物品
                 ItemStack book = new ItemStack(Material.ENCHANTED_BOOK);
                 ItemMeta itemMeta = book.getItemMeta();
-                itemMeta.setDisplayName("§ekitfood 教程书");
+                itemMeta.setDisplayName("§aKitfood §e教程书");
                 ArrayList<String> Lore = new ArrayList<>();
                 Lore.add("");
                 Lore.add("§7 右键这本书可以打开 kitfood 的教程界面");
@@ -41,6 +35,9 @@ public class kf implements CommandExecutor {
                 sender.sendMessage("§4[!] 这条命令不能在控制台运行 !!!");
             }
         }
+        sender.sendMessage("§7[!]  §4厨艺工艺 - kitfood §7正在运行");
+        sender.sendMessage(" §4| §7help  帮助列表");
+        sender.sendMessage(" §4| §7getbook  获取帮助书");
         return true;
     }
 }

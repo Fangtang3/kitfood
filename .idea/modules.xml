@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.wenkrang.kitfood.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.wenkrang.kitfood.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kitfood.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kitfood.main.iml" />
     </modules>
   </component>

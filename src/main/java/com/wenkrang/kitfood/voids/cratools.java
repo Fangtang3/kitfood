@@ -21,33 +21,19 @@ public class cratools {
         if (stringBuilder.charAt(0) != '0') {
             lore.add("§e它现在是脏的，你吃的下去么（）");
         }
-        int ying = Integer.parseInt(String.valueOf(stringBuilder.charAt(12)));
 
-        if (ying != 10) {
-            if (ying == 1) {
-                lore.add("§7这玩意太软了，和果冻一样");
-            }
-            if (ying == 2) {
-                lore.add("§7看起来很软，可以吃下去");
-            }
-            if (ying == 3) {
-                lore.add("§7可以吃了，硬度刚刚好");
-            }
-            if (ying == 4) {
-                lore.add("§7如果不烹饪一下，应该吃不了");
-            }
-            if (ying == 5) {
-                lore.add("§7您牙齿使用铁做的么，这是人吃的东西么");
-            }
-            if (ying == 6) {
-                lore.add("§7绝对吃不了，绝对吃不了！！！");
-            }
-            if (ying == 7) {
-                lore.add("§7我可以不吃么？它太硬了（");
-            }
+        // TODO: 懒得优化（？
+        lore.add(switch (Integer.parseInt(String.valueOf(stringBuilder.charAt(12)))) {
+            case 1 -> "§7这玩意太软了，和果冻一样";
+            case 2 -> "§7看起来很软，可以吃下去";
+            case 3 -> "§7可以吃了，硬度刚刚好";
+            case 4 -> "§7如果不烹饪一下，应该吃不了";
+            case 5 -> "§7您牙齿使用铁做的么，这是人吃的东西么";
+            case 6 -> "§7绝对吃不了，绝对吃不了！！！";
+            case 7 -> "§7我可以不吃么？它太硬了（";
+            default -> null;
+        } /* hardness */);
 
-
-        }
         int zhu = Integer.parseInt(String.valueOf(stringBuilder.charAt(2)));
         if (stringBuilder.charAt(2) != '9') {
             //对煮的时刻更新

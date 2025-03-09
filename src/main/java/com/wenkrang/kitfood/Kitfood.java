@@ -15,6 +15,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.ArrayList;
 
 public final class Kitfood extends JavaPlugin {
+    public static String AUTHOR = "Wenkrang";
+    public static String VERSION = "BETA TEST-A 1.0";
+    public static String DATE = "Mar 9 2025";
 
     @Override
     public void onEnable() {
@@ -28,7 +31,7 @@ public final class Kitfood extends JavaPlugin {
         this.getServer().getConsoleSender().sendMessage("§7| |  |        ||_______| | ||_______| |  | |______| /              ");
         this.getServer().getConsoleSender().sendMessage("§7| |__|        |__________| |__________|  |_________/                          ");
         this.getServer().getConsoleSender().sendMessage("                                                     ");
-        this.getServer().getConsoleSender().sendMessage(" §e作者: Wenrkang | 日期:7/15/2023 | 版本：BETA TEST-A 1.0                                                   ");
+        this.getServer().getConsoleSender().sendMessage(" §e作者: "+AUTHOR+" | 日期："+DATE+" | 版本："+VERSION+"                                                ");
         this.getServer().getConsoleSender().sendMessage("§7 [ KitFood ] 正在加载配方 ...");
         //加载配方
         loadrecipe.load();
@@ -72,7 +75,7 @@ public final class Kitfood extends JavaPlugin {
         this.getServer().getConsoleSender().sendMessage("  §7|   |       ||_______| | ||_______| |  | |______| /              ");
         this.getServer().getConsoleSender().sendMessage("  §7| __|       |__________| |__________|  |_________/                          ");
         this.getServer().getConsoleSender().sendMessage("                                                     ");
-        this.getServer().getConsoleSender().sendMessage(" §e作者: Wenrkang | 日期:7/15/2023 | 版本：BETA TEST-A 1.0                                                   ");
+        this.getServer().getConsoleSender().sendMessage(" §e作者: "+AUTHOR+" | 日期："+DATE+" | 版本："+VERSION+"                                                 ");
         this.getServer().getConsoleSender().sendMessage("§7 [ KitFood ] 正在发送关闭信号");
         isstop = true;
 
